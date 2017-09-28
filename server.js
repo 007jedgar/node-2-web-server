@@ -39,13 +39,19 @@ app.get('/', (req, res) => {
 res.render(('home.hbs'), {
   pageTitle: 'Home Page',
   currentYear: new Date().getFullYear(),
-  welcomeMessage: 'Welcome to my website',
+  welcomeMessage: 'Welcome to my website'
   });
 });
 
 app.get('/about', (req, res) => {
-  res.render('About.hbs', {
-    pageTitle: 'About Page',
+  res.render('about.hbs', {
+    pageTitle: 'About Page'
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page'
   });
 });
 
