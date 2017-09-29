@@ -21,10 +21,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// app.use((req, res, next) => {
-//   res.render('maintenance.hbs');
-// });
-
 app.use(express.static(__dirname + '/public'));
 
 hbs.registerHelper('getCurrentYear', () => {
@@ -39,7 +35,7 @@ app.get('/', (req, res) => {
 res.render(('home.hbs'), {
   pageTitle: 'Home Page',
   currentYear: new Date().getFullYear(),
-  welcomeMessage: 'Welcome to my website'
+  welcomeMessage: 'Welcome to my web app. It does nothing except give me something to test out deployment.'
   });
 });
 
